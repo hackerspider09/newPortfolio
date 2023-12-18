@@ -94,12 +94,26 @@ const Terminal = () => {
             setPromptHistory([])
         }
         else if(commandWithoutBlankItems[0] === "ls"){
-            if(commandWithoutBlankItems.length<=2){
+            const dictArray = ['home','about','project','resume']
+            if(commandWithoutBlankItems.length<=3){
                 if(currentPath === '/'){
                     if(commandWithoutBlankItems[1]==="-a"){
-                        newOutput = terminalCommands[commandWithoutBlankItems[1]] + terminalCommands["ls"]
-                    }else{
-                        newOutput = terminalCommands["ls"];
+                        if(commandWithoutBlankItems.length>2){
+                            if (dictArray.includes(commandWithoutBlankItems[2])){
+                                newOutput = terminalCommands['all'] + terminalCommands[commandWithoutBlankItems[2]]
+                            }else{
+                                newOutput = newOutput = `${commandWithoutBlankItems[2]}: No such file or directory`;
+                            }
+                        }else{
+                            newOutput = terminalCommands[commandWithoutBlankItems[1]] + terminalCommands['ls']
+                        }
+                    }else  {
+                        if (commandWithoutBlankItems.length===2){
+
+                            newOutput = terminalCommands[commandWithoutBlankItems[1]];
+                        }else{
+                            newOutput = terminalCommands['ls']
+                        }
                     }
                 }else{
                     newOutput = "";
