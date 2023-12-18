@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes  } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 // import Hero from './components/Hero';
 // import Contact from './components/Contact';
@@ -8,7 +8,7 @@ import Resume from './pages/Resume';
 import Footer from './components/Footer'
 import About from './pages/About';
 import Projects from './pages/Projects';
-
+import MemePage from './pages/MemePage';
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         <Route path='/about' element={<About/>} />
         <Route path='/project' element={<Projects/>} />
         <Route path='/resume' element={<Resume />} />
+        <Route path='/hacker' element={<MemePage />} />
       </Routes>
 
       <Footer /> 

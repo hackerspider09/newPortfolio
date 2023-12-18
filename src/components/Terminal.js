@@ -58,6 +58,8 @@ const Terminal = () => {
         }
       };
 
+      
+
     const handleEnter = (data)=>{
         let newOutput = null;
         const command = data.trim().split(' ');
@@ -67,6 +69,13 @@ const Terminal = () => {
             newOutput = currentPath;
         }
         else if(commandWithoutBlankItems[0] === "sudo"){
+            if(commandWithoutBlankItems.length >1){
+                const fullCommand = commandWithoutBlankItems.join(" ");
+                console.log(fullCommand)
+                if (fullCommand==="sudo rm -rf /*"){
+                    navigate('/hacker',{replace: true})
+                }
+            }
             newOutput = terminalCommands["sudo"];
         }
         else if(commandWithoutBlankItems[0] === "help"){
@@ -85,14 +94,35 @@ const Terminal = () => {
             setPromptHistory([])
         }
         else if(commandWithoutBlankItems[0] === "ls"){
-            if(commandWithoutBlankItems.length<2){
+            if(commandWithoutBlankItems.length<=2){
                 if(currentPath === '/'){
-                    newOutput = terminalCommands["ls"];
+                    if(commandWithoutBlankItems[1]==="-a"){
+                        newOutput = terminalCommands[commandWithoutBlankItems[1]] + terminalCommands["ls"]
+                    }else{
+                        newOutput = terminalCommands["ls"];
+                    }
                 }else{
                     newOutput = "";
                 }
             }else {
                 newOutput = "Command not recognized";
+                
+            }
+        }
+        else if(commandWithoutBlankItems[0] === "cat"){
+            if(commandWithoutBlankItems.length<=2){
+                if(currentPath === '/'){
+                    if(commandWithoutBlankItems[1]===".secret"){
+                        newOutput = terminalCommands[commandWithoutBlankItems[1]] 
+                    }else{
+                        newOutput = `${commandWithoutBlankItems[1]}: No such file or directory`;
+                    }
+                }else{
+                    newOutput = `${commandWithoutBlankItems[1]}: No such file or directory`;
+                }
+            }else {
+                newOutput = `${commandWithoutBlankItems[1]}: No such file or directory
+                `;
                 
             }
         }

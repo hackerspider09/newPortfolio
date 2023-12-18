@@ -19,8 +19,8 @@ const Navbar = () => {
     <header className='padding-x py-8 absolute z-10 w-full  '>
 
             <nav className='flex justify-between items-center max-container '>
-            <div className="flex  text-fLetter xl:text-4xl text-3xl">
-                    <span className=' font-bold'>&lt;</span><span><a href="/" className='font-agustina font-bold mx-2'>Prasad</a></span>
+            <div className="flex  text-fLetter xl:text-4xl text-3xl  ">
+                    <span className=' font-bold'>&lt;</span><span><a href="/" className=' font-agustina font-bold mx-2   '>Prasad</a></span>
                     <span className=' font-bold'>/&gt;</span>
                 </div>
 
@@ -51,7 +51,7 @@ const Navbar = () => {
                 >
                     <ul class="font-medium flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50  rtl:space-x-reverse  dark:bg-gray-800  dark:border-gray-700">
                         <li>
-                        <a href="/" class={`block py-2 px-3 text-white ${checkPage("/") ? "bg-mainBg " : ""} rounded   dark:text-white m`} aria-current="page">Home</a>
+                        <a href="/" class={`block py-2 px-3 text-white ${checkPage("/") ? "bg-mainBg " : ""} rounded   dark:text-white `} aria-current="page">Home</a>
                         </li>
                         <li>
                         <a href="/about" class={`block py-2 px-3 ${checkPage("/about") ? "bg-mainBg " : ""} text-gray-900 rounded hover:bg-gray-100    dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white `}>About Me</a>

@@ -9,7 +9,7 @@ const Contact = () => {
         <div className='max-container'>
 
           <div>
-              <h1 className="title-font text-center mb-4 text-2xl font-medium text-fLetter sm:text-3xl font-airstrike">Connect with me</h1>
+              <h1 className="title-font text-center mb-10 text-2xl font-medium text-fLetter sm:text-3xl font-airstrike ">Connect with me</h1>
 
           </div>
 

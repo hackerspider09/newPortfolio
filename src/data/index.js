@@ -127,15 +127,21 @@ export const SkillData=[
 ];
 
 {/* <div>
-    <span className='text-white'>resume.pdf</span>
-    <span className='text-fLetter'>about</span>
-    <span className='text-fLetter'>project</span>
-    <span className='text-fLetter'>contact</span>
-    <span className='text-fLetter'>project</span>
-</div> */}
+    <span className='text-fLetter'>.</span>
+    <span className='text-fLetter'>..</span>
+    <span className='text-white'>.secret</span>
+</div>  */}
+
+//  <div>
+//     <p className="text-primary">With great power comes... the responsibility to resist the urge to run '<span className="text-bold ">sudo rm -rf /*</span>'. Trust me, your computer will thank you, and so will the digital elves living in its circuits! 🧝✨ Keep the code mischievous, not malicious! 😉👾</p>
+// </div> 
 
   
 export const terminalCommands ={
+    '.secret':"<div><p className='text-primary'>With great power comes... the responsibility to resist the urge to run <span className='font-bold'>sudo rm -rf /*</span>. Trust me, your computer will thank you, and so will the digital elves living in its circuits! 🧝✨ Keep the code mischievous, not malicious! 😉👾</p></div>",
+    
+    '-a':" <div className='flex flex-wrap gap-3'><span className='text-fLetter'>.</span><span className='text-fLetter'>..</span><span className='text-white'>.secret</span></div>",
+
     'ls':"<div className='flex flex-wrap gap-3'><span className='text-white'>resume.pdf</span><span className='text-fLetter'>about</span><span className='text-fLetter'>project</span><span className='text-fLetter'>resume</span></div>",
     'sudo':"Bhai hacker hai hacker hacker",
     'infofetch':"<div className=' text-primary flex flex-row gap-6 max-xl:flex-col max-xl:items-center'><div><pre>.------------------.<br/>| .--------------. | <br/>| |   ______     | |<br/>| |  |_   __ \\   | | <br/>| |    | |__) |  | | <br/>| |    |  ___/   | |    <br/>| |   _| |_      | | <br/>| |  |_____|     | | <br/>| |              | |   <br/>| '--------------' | <br/>'------------------' </pre>       </div>       <div className=' text-primary'>        <div>          <p><i className='fa-solid fa-info'></i> Info Reveal</p><p>--------------------</p></div><div><p className='text-2xl'><i className='fa-solid fa-address-card'></i> About</p><p><i className='fa-solid fa-user'></i> Prasad Balaji Khatake</p><p><i className='fa-solid fa-graduation-cap'></i> BE-EnTC | PICT</p></div><div><p className='text-2xl'><i className='fa-solid fa-address-book'></i> Contact</p><p><i className='fa-solid fa-envelope'></i> prasadkhatake20@gmail.com</p><p><i className='fa-brands fa-github'></i> <a href='https://github.com/hackerspider09'>github.com/hackerspider09</a> </p><p><i className='fa-brands fa-linkedin'></i> <a href='https://www.linkedin.com/in/prasad-khatake'>linkedin.com/in/prasad-khatake</a> </p></div></div></div></div>",
