@@ -21,7 +21,7 @@ const About = () => {
             </div>
             <div className='m-6'>
 
-        <Contact />
+                <Contact />
             </div>
         </div>
     </div>

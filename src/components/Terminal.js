@@ -14,6 +14,8 @@ const Terminal = () => {
     const [inputC,setInputC] = useState("")
     const [prompt,setPrompt] = useState("")
     const [outputC,setOutputC] = useState("")
+    const [commandHistory,setcommandHistory] = useState([])
+    const [commandHistoryIndex,setcommandHistoryIndex] = useState(-1)
     const defPrompt = <p className='text-red-800 mr-1 inline-block '>prasad@DevMachine <span className='text-primary'>:</span><span>~</span>{currentPath!=='/' ? currentPath :""} <span className='text-primary'>$</span></p>
     
     const inputRef = useRef();
@@ -31,6 +33,30 @@ const Terminal = () => {
           terminalRef.current.scrollTop = terminalRef.current.scrollHeight;
         }
       }, [promptHistory]);
+
+
+      const handleKeyDown = (e) => {
+        if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          if (commandHistoryIndex >= 0) {
+            setInputC(commandHistory[commandHistoryIndex]);
+            
+            setcommandHistoryIndex(commandHistoryIndex >0 ? commandHistoryIndex-1 :0)
+            console.log("up",commandHistoryIndex)
+          }
+        } else if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          if (commandHistoryIndex < commandHistory.length-1) {
+            //   setcommandHistoryIndex(commandHistoryIndex<commandHistory.length-1 ? commandHistoryIndex + 1 :commandHistoryIndex);
+            setcommandHistoryIndex  (commandHistoryIndex + 1)
+            // console.log("index",commandHistoryIndex)
+              setInputC(commandHistory[commandHistoryIndex + 1])
+              console.log("down",commandHistoryIndex)
+          }else{
+            setInputC("")
+          }
+        }
+      };
 
     const handleEnter = (data)=>{
         let newOutput = null;
@@ -153,7 +179,7 @@ const Terminal = () => {
                         {defPrompt}
                     </label>
 
-                    <input ref={inputRef} type='text' name='ipCommand'  value={inputC}
+                    <input ref={inputRef} autoComplete="off" type='text' name='ipCommand'  value={inputC}
                     className='border-none outline-none m-0 p-0 bg-transparent text-fLetter '
                     onChange={(e)=>{
                         setInputC(e.target.value);
@@ -161,9 +187,18 @@ const Terminal = () => {
                     onKeyDown={(e)=>{
                         if(e.key==="Enter"){
                             {handleEnter(inputC)}
+                            setcommandHistory([...commandHistory,inputC])
+                            setcommandHistoryIndex(commandHistoryIndex+1)
                             setInputC("")
                         }
+                        if(e.key==='ArrowUp'){
+                            handleKeyDown(e)
+                        }
+                        if(e.key==='ArrowDown'){
+                            handleKeyDown(e)
+                        }
                     }}
+
                     />
                     </div>
 

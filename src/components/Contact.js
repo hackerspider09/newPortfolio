@@ -6,7 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 const Contact = () => {
   return (
     <div className='w-full'>
-        <div className='max-container  p-5'>
+        <div className='max-container'>
 
           <div>
               <h1 className="title-font text-center mb-4 text-2xl font-medium text-fLetter sm:text-3xl font-airstrike">Connect with me</h1>
@@ -17,13 +17,22 @@ const Contact = () => {
 
           
 
-            <div className='text-primary xl:w-[50%] mb-5 flex flex-col  leading-9 font-palanquin'>
+            <div className='text-primary xl:w-[50%] mb-5 flex flex-col  leading-9 font-palanquin '>
                         {/* <h2 className='text-2xl'>Connect with me</h2> */}
-                        <h3 > <span className='text-fLetter'><LocationOnIcon/></span> Planet Earth</h3>
+                        <h3 > <span className='text-fLetter '><LocationOnIcon/></span> Planet Earth</h3>
                         <h3> <span className='text-fLetter'><MailOutlineIcon /></span> prasadkhatake20@gmail.com</h3>
-                        <div className=' flex gap-3'>
-                          <span className='text-fLetter'><GitHubIcon/> </span> 
-                          <span className='text-fLetter'><LinkedInIcon /></span>
+                        <div className=' flex gap-3 '>
+                          <span className='text-fLetter hover:shadow-indigo-300 hover:shadow-lg rounded-full'>
+                            <a href='https://github.com/hackerspider09'>
+                            <GitHubIcon/> 
+                            </a>
+                            </span> 
+                          <span className='text-fLetter hover:shadow-indigo-300 hover:shadow-lg rounded-full'>
+                            <a href='https://www.linkedin.com/in/prasad-khatake'>
+                            <LinkedInIcon />
+
+                            </a>
+                            </span>
                         </div>
             </div>
 
