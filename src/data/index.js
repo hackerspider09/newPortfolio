@@ -87,11 +87,11 @@ export const SkillData=[
         vclass:false,
         iclass:"devicon-python-plain colored"
     },
-    {
-        id:14,
-        vclass:false,
-        iclass:"devicon-java-plain colored"
-    },
+    // {
+    //     id:14,
+    //     vclass:false,
+    //     iclass:"devicon-java-plain colored"
+    // },
     {
         id:15,
         vclass:false,
@@ -107,16 +107,16 @@ export const SkillData=[
         vclass:false,
         iclass:"devicon-github-original colored"
     },
-    {
-        id:18,
-        vclass:false,
-        iclass:"devicon-azure-plain"
-    },
-    {
-        id:19,
-        vclass:false,
-        iclass:"devicon-docker-plain colored"
-    },
+    // {
+    //     id:18,
+    //     vclass:false,
+    //     iclass:"devicon-azure-plain"
+    // },
+    // {
+    //     id:19,
+    //     vclass:false,
+    //     iclass:"devicon-docker-plain colored"
+    // },
     
     {
         id:20,
