@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import About from './pages/About';
 import Projects from './pages/Projects';
 import MemePage from './pages/MemePage';
+import ErrorPage from './pages/ErrorPage';
 
 function App() {
   return (
@@ -16,10 +17,12 @@ function App() {
         <Navbar />
       <Routes>
         <Route path='/' element={<Home/>} />
+        <Route path='/home' element={<Home/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/project' element={<Projects/>} />
         <Route path='/resume' element={<Resume />} />
         <Route path='/hacker' element={<MemePage />} />
+        <Route path='*' element={<ErrorPage />} />
       </Routes>
 
       <Footer /> 
