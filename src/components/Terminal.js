@@ -9,14 +9,16 @@ const Terminal = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    const currentPath = location.pathname;
+    // let currentPath = location.pathname;
+    // let currentPath = "/";
+    const [currentPath,setCurrentPath] =useState("/")
 
     const [inputC,setInputC] = useState("")
     const [prompt,setPrompt] = useState("")
     const [outputC,setOutputC] = useState("")
     const [commandHistory,setcommandHistory] = useState([])
     const [commandHistoryIndex,setcommandHistoryIndex] = useState(-1)
-    const defPrompt = <p className='text-red-800 mr-1 inline-block '>prasad@DevMachine <span className='text-primary'>:</span><span>~</span>{currentPath!=='/' ? currentPath :""} <span className='text-primary'>$</span></p>
+    const defPrompt = <p className='text-red-800 mr-1 inline-block '>prasad@DevMachine <span className='text-primary'>:</span><span>~</span>{currentPath!=='/' ? "/"+currentPath :""} <span className='text-primary'>$</span></p>
     
     const inputRef = useRef();
     const terminalRef = useRef();
@@ -82,10 +84,16 @@ const Terminal = () => {
             newOutput = terminalCommands["help"];
         }
         else if(commandWithoutBlankItems[0] === "cd"){
-            if(commandWithoutBlankItems.length<2){
-                navigate('/')
+            const dictArray = ['Resume','About','Project']
+            if(commandWithoutBlankItems.length<2 || commandWithoutBlankItems[1]==='..'){
+                console.log("less tahn teo")
+                setCurrentPath("/")
+                // navigate('/')
             }else{
-                navigate("/"+commandWithoutBlankItems[1])
+                // navigate("/"+commandWithoutBlankItems[1])
+                if (dictArray.includes(commandWithoutBlankItems[1])){
+                    setCurrentPath(commandWithoutBlankItems[1])
+                }
             }
             newOutput = "";
         }
@@ -94,9 +102,9 @@ const Terminal = () => {
             setPromptHistory([])
         }
         else if(commandWithoutBlankItems[0] === "ls"){
-            const dictArray = ['home','about','project','resume']
+            const dictArray = ['About','Project','Resume']
             if(commandWithoutBlankItems.length<=3){
-                if(currentPath === '/'){
+                // if(currentPath === '/'){
                     if(commandWithoutBlankItems[1]==="-a"){
                         if(commandWithoutBlankItems.length>2){
                             if (dictArray.includes(commandWithoutBlankItems[2])){
@@ -105,19 +113,20 @@ const Terminal = () => {
                                 newOutput = newOutput = `${commandWithoutBlankItems[2]}: No such file or directory`;
                             }
                         }else{
-                            newOutput = terminalCommands[commandWithoutBlankItems[1]] + terminalCommands['ls']
+                            newOutput = currentPath==="/" ? terminalCommands["-a"] : terminalCommands["all"]   
+                            newOutput += terminalCommands[currentPath]
                         }
                     }else  {
-                        if (commandWithoutBlankItems.length===2){
+                        if (commandWithoutBlankItems.length<2){
 
-                            newOutput = terminalCommands[commandWithoutBlankItems[1]];
+                            newOutput = terminalCommands[currentPath];
                         }else{
-                            newOutput = terminalCommands['ls']
+                            newOutput = terminalCommands[commandWithoutBlankItems[1]]
                         }
                     }
-                }else{
-                    newOutput = "";
-                }
+                // }else{
+                //     newOutput = "";
+                // }
             }else {
                 newOutput = "Command not recognized";
                 
@@ -126,13 +135,19 @@ const Terminal = () => {
         else if(commandWithoutBlankItems[0] === "cat"){
             if(commandWithoutBlankItems.length<=2){
                 if(currentPath === '/'){
+                    
                     if(commandWithoutBlankItems[1]===".secret"){
                         newOutput = terminalCommands[commandWithoutBlankItems[1]] 
                     }else{
                         newOutput = `${commandWithoutBlankItems[1]}: No such file or directory`;
                     }
                 }else{
-                    newOutput = `${commandWithoutBlankItems[1]}: No such file or directory`;
+                    if(terminalCommands[commandWithoutBlankItems[1]] !== undefined){
+                        newOutput = terminalCommands[commandWithoutBlankItems[1]] 
+                    }
+                    else{
+                        newOutput = `${commandWithoutBlankItems[1]}: No such file or directory`;
+                    }
                 }
             }else {
                 newOutput = `${commandWithoutBlankItems[1]}: No such file or directory

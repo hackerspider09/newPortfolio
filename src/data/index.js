@@ -2,8 +2,8 @@
 export const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Me" },
-    { href: "/projects", label: "Projects" },
-    { href: "/about#contact-us", label: "Contact Me" },
+    { href: "/project", label: "Projects" },
+    { href: "/about/#contact", label: "Contact Me" },
 ];
 
 
@@ -147,23 +147,31 @@ export const terminalCommands ={
     
     '-a':" <div className='flex flex-wrap gap-3'><span className='text-fLetter'>.</span><span className='text-fLetter'>..</span><span className='text-white'>.secret</span></div>",
 
-    'about':"<div className='flex flex-wrap gap-3'><span className='text-fLetter'>Skills</span><span className='text-fLetter'>Testimonial</span><span className='text-fLetter'>Contact</span></div> ",
+    'About':"<div className='flex flex-wrap gap-3'><span className='text-white'>skills</span><span className='text-white'>testimonial</span><span className='text-white'>contact</span></div> ",
 
-    'project':"<div className='flex flex-wrap gap-3'><span className='text-fLetter'>Projects</span></div> ",
+    'contact':"<div className=''><h1 className='text-white'>Email : prasadkhatake20@gmail.com</h1><h1 className='text-white'>GitHub : github.com/hackerspider09</h1><h1 className='text-white'>LinkedIn : linkedin.com/in/prasad-khatake</h1></div> ",
 
-    'home':`<div className='flex flex-wrap gap-3'><span className='text-white'>terminal</span></div>`,
+    'skills':"<div className='flex flex-wrap gap-3'><span className='text-white'>python</span><span className='text-white'>CPP</span><span className='text-white'>Django</span><span className='text-white'>Docker</span><span className='text-white'>Azure</span><span className='text-white'>Git</span><span className='text-white'>My-SQL</span><span className='text-white'>GitHub</span><span className='text-white'>React JS</span><span className='text-white'>DSA</span><span className='text-white'>OOP</span></div> ",
 
-    'resume':"<div className='flex flex-wrap gap-3'><span className='text-fLetter'>Resume</span></div> ",
+    'testimonial':"<div className=''><h1 className='text-white'>Dev</h1></div> ",
 
+    'Project':"<div className='flex flex-wrap gap-3'><span className='text-fLetter'>Projects</span></div> ",
 
-    'ls':"<div className='flex flex-wrap gap-3'><span className='text-white'>resume.pdf</span><span className='text-fLetter'>home</span><span className='text-fLetter'>about</span><span className='text-fLetter'>project</span><span className='text-fLetter'>resume</span></div>",
+    'home':`<div className='flex flex-wrap gap-3'><span className='text-white'>terminal</span><span className='text-fLetter'>About</span><span className='text-fLetter'>Project</span><span className='text-fLetter'>Resume</span></div>`,
+
+    '/':`<div className='flex flex-wrap gap-3'><span className='text-fLetter'>About</span><span className='text-fLetter'>Project</span><span className='text-fLetter'>Resume</span></div>`,
+
+    'Resume':"<div className='flex flex-wrap gap-3'><span className='text-white'>resume.pdf</span></div> ",
+
+// <span className='text-fLetter'>home</span>
+    'ls':"<div className='flex flex-wrap gap-3'><span className='text-white'>resume.pdf</span><span className='text-white'>terminal</span><span className='text-fLetter'>about</span><span className='text-fLetter'>project</span><span className='text-fLetter'>resume</span></div>",
 
     'sudo':"Bhai hacker hai hacker hacker",
 
     'infofetch':`<div className=' text-primary flex flex-row gap-6 max-xl:flex-col max-xl:items-center'><div><pre>.------------------.<br/>| .--------------. | <br/>| |   ______     | |<br/>| |  |_   __ \\   | | <br/>| |    | |__) |  | | <br/>| |    |  ___/   | |    <br/>| |   _| |_      | | <br/>| |  |_____|     | | <br/>| |              | |   <br/>| '--------------' | <br/>'------------------' </pre>       </div>       <div className=' text-primary'>        <div>          <p><i className='fa-solid fa-info'></i> Info Reveal</p><p>--------------------</p></div><div><p className='text-2xl'><i className='fa-solid fa-address-card'></i> About</p><p><i className='fa-solid fa-user'></i> Prasad Balaji Khatake</p><p><i className='fa-solid fa-graduation-cap'></i> BE-EnTC | PICT</p></div><div><p className='text-2xl'><i className='fa-solid fa-address-book'></i> Contact</p><p><i className='fa-solid fa-envelope'></i> prasadkhatake20@gmail.com</p><p><i class="fa-brands fa-github"></i>  <a href='https://github.com/hackerspider09'>github.com/hackerspider09</a> </p><p><i class="fa-brands fa-linkedin"></i> <a href='https://www.linkedin.com/in/prasad-khatake'>linkedin.com/in/prasad-khatake</a> </p></div></div></div></div>`,
 
 
-    'help':"<div className='text-primary'><p><strong>Commands available:</strong></p><ol><li><span className='text-fLetter'>pwd</span> - Print the current working directory.</li><li><span className='text-fLetter'>sudo</span> - Execute a command with elevated privileges.</li><li><span className='text-fLetter'>cd</span> - Change the current directory.</li><li><span className='text-fLetter'>ls</span> - List the contents of the current directory.</li><li><span className='text-fLetter'>xdg-open</span> - Use this to open PDF files.</li><li><span className='text-fLetter'>whoami</span> - Display the username.</li><li><span className='text-fLetter'>date</span> - Show the current date.</li><li><span className='text-fLetter'>clear</span> - Clear the terminal screen.</li><li><span className='text-fLetter'>github</span> - To visit my GitHub profile.</li><li><span className='text-fLetter'>linkedin</span> - To visit my LinkedIn profile.</li><li><span className='text-fLetter'>infofetch</span> - Get short details about me.</li><li><span className='text-fLetter'>cat</span> -  Display content of a file.</li></ol></div>"
+    'help':"<div className='text-primary'><p><strong>Commands available:</strong></p><ol><li><span className='text-fLetter'>pwd</span> - Print the current working directory.</li><li><span className='text-fLetter'>sudo</span> - Execute a command with elevated privileges.</li><li><span className='text-fLetter'>cd</span> - Change the current directory.</li><li><span className='text-fLetter'>ls</span> - List the contents of the current directory. Files are denoted by white color, directories by green.</li><li><span className='text-fLetter'>xdg-open</span> - Use this to open PDF files.</li><li><span className='text-fLetter'>whoami</span> - Display the username.</li><li><span className='text-fLetter'>date</span> - Show the current date.</li><li><span className='text-fLetter'>clear</span> - Clear the terminal screen.</li><li><span className='text-fLetter'>github</span> - To visit my GitHub profile.</li><li><span className='text-fLetter'>linkedin</span> - To visit my LinkedIn profile.</li><li><span className='text-fLetter'>infofetch</span> - Get short details about me.</li><li><span className='text-fLetter'>cat</span> -  Display content of a file.</li></ol></div>"
 }
 
         //    .----------------. 
