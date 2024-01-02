@@ -2,6 +2,7 @@ import React from 'react'
 import ProjectCard from '../components/ProjectCard'
 import { project } from '../data'
 import Title from '../components/Title'
+import { indigo } from '@mui/material/colors'
 const Projects = () => {
   return (
     <div className='w-full'>
@@ -11,9 +12,9 @@ const Projects = () => {
         </div>
         <div className='flex flex-wrap m-9 gap-10 justify-center items-center h-auto'>
 
-        {project.map((data,idex)=>(
+        {project.map((data,index)=>(
           
-          <ProjectCard project={data}/>
+          <ProjectCard key={index} project={data}/>
           
           ))}
           </div>

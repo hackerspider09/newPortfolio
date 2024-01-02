@@ -21,7 +21,7 @@ const Form = () => {
     </div>
 
       <div className="xl:w-[50%] flex flex-wrap">
-
+      {/* <small className='text-red'>Form is not working</small> */}
         {/* <!-- form --> */}
         <div className="w-1/2 p-2">
           <div className="relative">
