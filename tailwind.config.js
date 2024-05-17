@@ -25,8 +25,10 @@ export default {
       },
       colors: {
         'mainBg': "#0E1630",
+        'terminalBg': "#1c2545",
         'mycard': "#171F38",
-        'fLetter': "#05CF93",
+        // 'fLetter': "#05CF93",
+        'fLetter': "#1fda25",
         'primary': "#ECEEFF",
         "coral-red": "#FF6452",
         "slate-gray": "#6D6D6D",

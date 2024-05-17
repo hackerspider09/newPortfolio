@@ -13,19 +13,40 @@
   scroll-behavior: smooth;
 }
 
-*::-webkit-scrollbar {
+/* *::-webkit-scrollbar {
   width: 10px;
-}
+} */
 
-*::-webkit-scrollbar-track {
+/* *::-webkit-scrollbar-track {
   background: #0E1630;
-  /* border-radius: 5px; */
-}
-
+} */
+/* 
 *::-webkit-scrollbar-thumb {
   background-color: #05CF93;
   border-radius: 14px;
   border: 1px solid #037251;
+} */
+
+/* ((((( */
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1fda25;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2ac231;
 }
 
 @font-face {
@@ -82,4 +103,25 @@
   }
 
   
+}
+
+
+
+input {
+  font-size: 16px; /* Adjust the font size */
+}
+
+input::selection {
+  background: transparent;
+}
+
+input::-webkit-caret {
+  width: 2px; /* Adjust the caret width */
+  background: black; /* Adjust the caret color */
+}
+
+@media (max-width: 639px) {
+  .terminalSmallText {
+    font-size: 0.5rem; /* Change font size for small devices */
+  }
 }

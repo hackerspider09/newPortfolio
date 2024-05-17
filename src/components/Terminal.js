@@ -1,13 +1,27 @@
 import React,{useState,useCallback,useEffect,useRef} from 'react'
-import {terminalCommands} from "../data/index"
+import {terminalCommands,banner} from "../data/index"
 import parse from 'html-react-parser';
 import { useLocation ,useNavigate} from 'react-router-dom';
-
-
+import TerminalPrompt from './TerminalPrompt';
+import DefaultPrompt from './DefaultPrompt';
+import ResizableWindow from './ResizableWindow';
+import CloseIcon from '@mui/icons-material/Close';
+import RemoveIcon from '@mui/icons-material/Remove';
+import AddIcon from '@mui/icons-material/Add';
+import TerminalForm from './TerminalForm';
 
 const Terminal = () => {
     const location = useLocation();
     const navigate = useNavigate();
+    const [isWindowOpen, setIsWindowOpen] = useState(false); // State to track if the window is open
+
+    const handleOpenWindow = () => {
+        setIsWindowOpen(true); // Set the state to open the window
+    };
+
+    const handleCloseWindow = () => {
+        setIsWindowOpen(false); // Set the state to close the window
+    };
 
     // let currentPath = location.pathname;
     // let currentPath = "/";
@@ -24,11 +38,45 @@ const Terminal = () => {
     const terminalRef = useRef();
 
     const [promptHistory, setPromptHistory] = useState([]);
+    const [isMaximize, setIsMaximize] = useState(false);
+    const [isMinimize, setIsMinimize] = useState(false);
+    const [displayTerminalPrompt, setDisplayTerminalPrompt] = useState(true); // disable input prompt when email has to send
+    const [disableEmailForm, setDisableEmailForm] = useState(true); 
+
+
 
 
     useEffect(()=>{
+        
+        if (location.hash === '#terminal') {
+            // Run justTerminal(true) if the URL contains '#terminal'
+            justTerminal(true);
+        }
+        
+    },[location])
+    
+
+    const justTerminal =(flag)=>{
+        if (flag){
+            document.body.style.overflow = 'hidden';
+        }else{
+
+            document.body.style.overflow = 'auto';
+        }
         inputRef.current.focus();
-    },[])
+    }
+    const handleClose = () => {
+        // Re-enable overflow when the popup is closed
+        justTerminal(false);
+        inputRef.current.blur();
+    };
+
+
+    const scrollToTerminal = () => {
+        document.querySelector(`#terminal`).scrollIntoView()
+    };
+    
+    
 
     useEffect(() => {
         if (terminalRef.current) {
@@ -102,6 +150,7 @@ const Terminal = () => {
             setPromptHistory([])
         }
         else if(commandWithoutBlankItems[0] === "ls"){
+       
             const dictArray = ['About','Project','Resume']
             if(commandWithoutBlankItems.length<=3){
                 // if(currentPath === '/'){
@@ -189,13 +238,20 @@ const Terminal = () => {
             const d = new Date();
             newOutput = d;
         }
+        else if(commandWithoutBlankItems[0] === "email"){
+            newOutput = ""
+            setDisplayTerminalPrompt(false);
+            setDisableEmailForm(false);
+        }
         else{
             newOutput = "Command not recognized";
         }
 
         
                 
-        const newPrompt = <p><span className='text-red-800 mr-1'>{defPrompt}</span> <span className='text-fLetter'>{data}</span></p>;
+        // const newPrompt = <p><span className='text-red-800 mr-1'>{defPrompt}</span> <span className='text-fLetter'>{data}</span></p>;
+        console.log("crnt path in ",currentPath)
+        const newPrompt = <span className='text-red-800 mr-1'><DefaultPrompt currentPath={currentPath} data={data}/> </span>;
 
         const newPrompt2 = {
             command: newPrompt,
@@ -208,25 +264,33 @@ const Terminal = () => {
     }
 
   return (
-    <div className='w-full ' id='terminal'>
-        <div className='max-container flex justify-center items-center flex-col ' onClick={()=>{inputRef.current.focus();}}>
-
-        <div className='flex justify-start w-[80%] relative -bottom-6 '>
-  <span className='inline-block w-3 h-3 rounded-full mr-1 bg-red-500'></span>
-  <span className='inline-block w-3 h-3 rounded-full mr-1 bg-yellow-500'></span>
-  <span className='inline-block w-3 h-3 rounded-full mr-1 bg-green-500'></span>
+    <div className='w-full h-screen z-0' id='terminal'>
+        
+        <div className={`${isMaximize ? 'w-full px-5' : 'max-container'}  h-full flex justify-center items-center flex-col `} >
+        
+        <div className={` ${isMaximize ? 'w-full' : 'w-[80%]'} flex justify-start border-2 relative -bottom-6 text-sm bg-terminalBg rounded-t-md p-1`}>
+  <span className='inline-block  rounded-full mr-1 bg-red-500' onClick={handleClose}><CloseIcon fontSize='small'/></span>
+  <span className='inline-block  rounded-full mr-1 bg-yellow-500' onClick={()=>{setIsMaximize(false)}}><RemoveIcon fontSize='small'/></span>
+  <span className='inline-block  rounded-full mr-1 bg-green-500' onClick={()=>{setIsMaximize(true)}}><AddIcon fontSize='small'/> </span>
 </div>
 
 
-            <div className='w-[80%] border-2   m-7 h-[40vh] overflow-auto py-1 px-3 ' ref={terminalRef}>
+            <div className={` ${isMaximize ? 'w-full h-[90%]' : 'w-[80%] h-[40vh]'} border-2 bg-terminalBg rounded-b-md m-7  overflow-auto py-1 px-3`} ref={terminalRef} onClick={()=>{inputRef.current.focus();scrollToTerminal();justTerminal(true); }}>
 
 
                     <div className=''>
+                        <div className='text-center m-1 xl:text-md terminalSmallText'>
+                            <pre className='text-fLetter '>{banner}</pre>
+                        </div>
                         <p className='text-primary'>Type 'help' to see the list of available commands.</p>
+                        
                 
                     { promptHistory.map((prompti, index) => (
-                            <div key={index} >
-                    {prompti.command} <span className='text-primary'>{parse(`${prompti.output}` )} </span>
+                            <div key={index} className='flex flex-col'>
+                                <div>
+                                {prompti.command}
+                                </div>
+                                <div className='text-primary  -mt-5'>{parse(`${prompti.output}` )} </div>
                     </div>
                          ))}
 
@@ -234,11 +298,11 @@ const Terminal = () => {
 
                     <div>
 
-                    <label>
+                    {/* <label>
                         {defPrompt}
-                    </label>
+                    </label> */}
 
-                    <input ref={inputRef} autoComplete="off" type='text' name='ipCommand'  value={inputC}
+                    {/* <input ref={inputRef} autoComplete="off" type='text' name='ipCommand'  value={inputC}
                     className='border-none outline-none m-0 p-0 bg-transparent text-fLetter '
                     onChange={(e)=>{
                         setInputC(e.target.value);
@@ -258,12 +322,39 @@ const Terminal = () => {
                         }
                     }}
 
-                    />
-                    </div>
+                    /> */}
 
+
+                    {
+                        displayTerminalPrompt ?
+
+                    <TerminalPrompt 
+                    inputRef={inputRef}
+                    inputC={inputC}
+                    setInputC={setInputC}
+                    handleEnter={handleEnter}
+                    handleKeyDown={handleKeyDown}
+                    commandHistory={commandHistory}
+                    setcommandHistory={setcommandHistory}
+                    commandHistoryIndex={commandHistoryIndex}
+                    setcommandHistoryIndex={setcommandHistoryIndex}
+                    currentPath={currentPath}
+                    />
+                        :
+                        !disableEmailForm &&
+                    <TerminalForm setDisplayTerminalPrompt={setDisplayTerminalPrompt} setDisableEmailForm={setDisableEmailForm} terminalRef={terminalRef} />
+                    }
+
+
+
+
+
+
+
+
+                </div>
             </div>
-        </div>
-        
+         </div>    
     </div>
   )
 }

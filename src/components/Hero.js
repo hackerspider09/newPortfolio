@@ -2,12 +2,17 @@ import React from 'react'
 import Typing from "./TypingAnimation";
 import Button from "./Button"
 import {logo} from "../assets/index"
+import MatrixRainingCode from './MatrixRainingCode';
 
 const Hero = () => {
   return (
-    <div className='min-h-screen w-full'>
+    <div className='min-h-screen w-full '>
         <div className='max-container min-h-screen flex xl:flex-row flex-col-reverse  justify-center items-center  xl:gap-4'>
+       
+          {/* <div className='w-full'>
 
+              <MatrixRainingCode className="absolute inset-0" /> 
+           </div> */}
             <div className='text-white p-20'>
                 <h2 className='flex gap-1  xl:text-[3rem] text-[1.5rem] max-xl:block'>Hi there My name is <span className="text-fLetter inline-block"><Typing/> </span></h2>
                 <p className='xl:text-2xl text-[0.9rem] text-primary font-palanquin'>

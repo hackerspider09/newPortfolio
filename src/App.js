@@ -11,9 +11,24 @@ import Projects from './pages/Projects';
 import MemePage from './pages/MemePage';
 import ErrorPage from './pages/ErrorPage';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
   return (
-    <div className="flex flex-col bg-mainBg">
+    <div className="flex flex-col bg-mainBg overflow-y-hidden">
+      <ToastContainer
+      position="bottom-center"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="dark"
+      />
         <Navbar />
       <Routes>
         <Route path='/' element={<Home/>} />
