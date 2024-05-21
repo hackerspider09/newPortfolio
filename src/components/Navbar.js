@@ -20,7 +20,7 @@ const Navbar = () => {
 
             <nav className='flex justify-between items-center max-container '>
             <div className="flex  text-fLetter xl:text-4xl text-3xl  ">
-                    <span className=' font-bold'>&lt;</span><span className='hover:scale-110'><a href="/" className=' font-agustina font-bold mx-2   '>Prasad</a></span>
+                    <span className=' font-bold'>&lt;</span><span className='transform transition-transform duration-300 ease-in-out hover:scale-110 '><a href="/" className=' font-agustina font-bold mx-2   '>Prasad</a></span>
                     <span className=' font-bold'>/&gt;</span>
                 </div>
 

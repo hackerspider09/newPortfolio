@@ -1,5 +1,6 @@
 import './App.css';
-import { Route, Routes  } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Route, Routes ,useLocation } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 // import Hero from './components/Hero';
 // import Contact from './components/Contact';
@@ -15,6 +16,14 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash){
+      document.querySelector(`${location.hash}`).scrollIntoView()
+    }
+}, [location.hash])
+
   return (
     <div className="flex flex-col bg-mainBg overflow-y-hidden">
       <ToastContainer

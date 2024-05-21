@@ -6,8 +6,11 @@ import Skills from "./Skills"
 import Title from '../components/Title'
 
 import HorizontalLine from '../components/HorizontalLine'
+import { useEffect } from 'react'
 
 const About = () => {
+    
+    
   return (
     <div className='w-full ' id='skills'>
         <div className='min-h-screen pt-32'>
