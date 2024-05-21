@@ -250,7 +250,7 @@ const Terminal = () => {
         
                 
         // const newPrompt = <p><span className='text-red-800 mr-1'>{defPrompt}</span> <span className='text-fLetter'>{data}</span></p>;
-        console.log("crnt path in ",currentPath)
+        // console.log("crnt path in ",currentPath)
         const newPrompt = <span className='text-red-800 mr-1'><DefaultPrompt currentPath={currentPath} data={data}/> </span>;
 
         const newPrompt2 = {
@@ -275,7 +275,7 @@ const Terminal = () => {
 </div>
 
 
-            <div className={` ${isMaximize ? 'w-full h-[90%]' : 'w-[80%] h-[40vh]'} border-2 bg-terminalBg rounded-b-md m-7  overflow-auto py-1 px-3`} ref={terminalRef} onClick={()=>{inputRef.current.focus();scrollToTerminal();justTerminal(true); }}>
+            <div className={` ${isMaximize ? 'w-full xl:h-[90%] h-[80%]' : 'w-[80%] h-[40vh]'} border-2 bg-terminalBg rounded-b-md m-7  overflow-auto py-1 px-3`} ref={terminalRef} onClick={()=>{inputRef.current.focus();scrollToTerminal();justTerminal(true); }}>
 
 
                     <div className=''>

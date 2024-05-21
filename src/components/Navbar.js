@@ -42,7 +42,7 @@ const Navbar = () => {
                 <div>
                     {/* <img src={hamburger} alt="Hamburger" 
                     width={30} height={30} className='hidden max-lg:block color-white'/> */}
-                    <span className='hidden max-lg:block ' onClick={()=>{setHamClicked(!hamClicked)}}><MenuOutlinedIcon sx={{ color: "#05CF93" }} fontSize="large"/></span>
+                    <span className='hidden max-lg:block ' onClick={()=>{setHamClicked(!hamClicked)}}><MenuOutlinedIcon sx={{ color: "#1fda25" }} fontSize="large"/></span>
                 </div>
 
                 <div className={`${hamClicked ? "block" : "hidden" } xl:hidden w-full   absolute z-50 top-20 right-0`} id="navbar-default" 

@@ -16,12 +16,13 @@ const About = () => {
         {/* <h1 className="title-font text-center mb-4 text-2xl font-medium text-fLetter sm:text-3xl font-airstrike">Skills</h1> */}
         <Skills />
             </div>
-            <HorizontalLine />
+
+            {/* <HorizontalLine />
             <div className='m-6' id='testimonial'>
             <Title title="Testimonial" />
-        {/* <h1 className="title-font text-center mb-4 text-2xl font-medium text-fLetter sm:text-3xl font-airstrike">Testimonial</h1> */}
         <Testimonial />
-            </div>
+            </div> */}
+            
             <HorizontalLine />
             <div className='m-6' id='contact'>
 

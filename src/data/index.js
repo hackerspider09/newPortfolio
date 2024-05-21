@@ -4,6 +4,7 @@ export const navLinks = [
     { href: "/about", label: "About Me" },
     { href: "/project", label: "Projects" },
     { href: "/about#contact", label: "Contact Me" },
+    { href: "/resume", label: "Resume" },
 ];
 
 
@@ -60,7 +61,7 @@ export const SkillData=[
     {
         id:8,
         vclass:false,
-        iclass:"devicon-django-plain"
+        iclass:"devicon-django-plain "
     },
     {
         id:9,
@@ -95,7 +96,7 @@ export const SkillData=[
     {
         id:15,
         vclass:false,
-        iclass:"devicon-linux-plain"
+        iclass:"devicon-linux-plain colored"
     },
     {
         id:16,
@@ -105,12 +106,12 @@ export const SkillData=[
     {
         id:17,
         vclass:false,
-        iclass:"devicon-github-original colored"
+        iclass:"devicon-github-original "
     },
     {
         id:18,
         vclass:false,
-        iclass:"devicon-azure-plain"
+        iclass:"devicon-azure-plain colored"
     },
     {
         id:19,
@@ -291,6 +292,14 @@ export const project = [
         "techstack": ["Django", "Django REST Framework", "React", "SQL", "Docker", "Azure"],
         "gitlink": "https://github.com/CTD-23/NCC-Backend",
         "deplink": ""
+    },
+    {
+        "id": 3,
+        "title": "Portfolio",
+        "desc": "Personal Tech portfolio",
+        "techstack": ["React", "Tailwindcss"],
+        "gitlink": "https://github.com/hackerspider09/newPortfolio",
+        "deplink": "https://prasadkhatake.netlify.app"
     },
     
 ]

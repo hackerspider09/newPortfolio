@@ -1,23 +1,26 @@
 import React from 'react'
 import CodeIcon from '@mui/icons-material/Code';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
-import {clash,ncc} from "../assets/index"
+import {clash,ncc,portfolio} from "../assets/index"
 
 const ProjectCard = (props) => {
 
-    const imgArray = [clash,ncc];
+    const imgArray = [clash,ncc,portfolio];
   return (
     
 
-<div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:shadow-indigo-300 hover:shadow-lg hover:scale-105">
-    <a href="">
-        <img className="rounded-t-lg" src={imgArray[props.project.id -1]} alt="project img" />
-    </a>
-    <div className="p-5">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-fLetter">{props.project.title}</h5>
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{props.project.desc}</p>
+<div className="max-w-sm h-[33rem] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:shadow-indigo-300 hover:shadow-lg hover:scale-105">
+    <div className='h-48'>
 
-        <div className='text-gray-700 flex flex-wrap gap-2 m-3'>
+        <a href="">
+            <img className="rounded-t-lg" src={imgArray[props.project.id -1]} alt="project img" />
+        </a>
+    </div>
+    <div className="p-5 flex h-[21rem] flex-col gap-3 justify-evenly">
+            <h5 className=" text-2xl font-bold tracking-tight text-gray-900 dark:text-fLetter">{props.project.title}</h5>
+        <p className=" font-normal text-gray-700 dark:text-gray-400">{props.project.desc}</p>
+
+        <div className='text-gray-700 flex flex-wrap gap-2 '>
             {
                 props.project.techstack.map((stack,index)=>(
 
