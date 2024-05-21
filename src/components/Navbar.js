@@ -50,7 +50,7 @@ const Navbar = () => {
                 onClick={()=>{setHamClicked(false)}}
                 >
                     <ul className="font-medium flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50  rtl:space-x-reverse  dark:bg-gray-800  dark:border-gray-700">
-                        <li className={`block py-2 px-3 text-white ${checkPage("/") ? "bg-mainBg " : ""} rounded   dark:text-white `} aria-current="page">
+                        {/* <li className={`block py-2 px-3 text-white ${checkPage("/") ? "bg-mainBg " : ""} rounded   dark:text-white `} aria-current="page">
                         <Link to="/"  >Home</Link>
                         </li>
                         <li className={`block py-2 px-3 ${checkPage("/about") ? "bg-mainBg " : ""} text-gray-900 rounded hover:bg-gray-100    dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white `}>
@@ -59,6 +59,19 @@ const Navbar = () => {
                         <li className={`block py-2 px-3 text-gray-900 ${checkPage("/project") ? "bg-mainBg " : ""} rounded hover:bg-gray-100    dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white `}>
                         <Link to="/project" >Project</Link>
                         </li>
+                        <li className={`block py-2 px-3 text-gray-900 ${checkPage("/project") ? "bg-mainBg " : ""} rounded hover:bg-gray-100    dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white `}>
+                        <Link to="/project" >Contact Me</Link>
+                        </li>
+                        <li className={`block py-2 px-3 text-gray-900 ${checkPage("/project") ? "bg-mainBg " : ""} rounded hover:bg-gray-100    dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white `}>
+                        <Link to="/project" >Project</Link>
+                        </li> */}
+                        {navLinks.map((item)=>(
+                        <li key={item.label} className={`block py-2 px-3  ${checkPage(item.href) ? "bg-mainBg " : "hover:bg-gray-700 hover:text-white"} rounded   text-white `} aria-current="page">
+                            <Link to={item.href}>
+                                {item.label}
+                            </Link>
+                        </li>
+                    ))}
                         <a href='/#terminal'>
 
                         <li className="block py-2 px-3  text-fLetter rounded hover:bg-gray-100   dark:hover:bg-gray-700 dark:hover:text-white "><TerminalIcon fontSize="large"  /></li>
