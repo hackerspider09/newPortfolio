@@ -296,10 +296,18 @@ export const project = [
     {
         "id": 3,
         "title": "Portfolio",
-        "desc": "Personal Tech portfolio",
+        "desc": "A personal tech portfolio showcasing projects, skills, and experiences.",
         "techstack": ["React", "Tailwindcss"],
         "gitlink": "https://github.com/hackerspider09/newPortfolio",
         "deplink": "https://prasadkhatake.netlify.app"
+    },
+    {
+        "id": 4,
+        "title": "Floating Sticky Notes",
+        "desc": "A Java-based application that creates floating sticky notes on the screen. These notes persistently stick to the sides of the screen and allow users to create, edit, and delete notes.",
+        "techstack": ["Java"],
+        "gitlink": "https://github.com/hackerspider09/FloatingNotes",
+        "deplink": ""
     },
     
 ]

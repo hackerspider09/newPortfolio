@@ -14,6 +14,8 @@ const Home = () => {
     {/* </div> */}
     <HorizontalLine />
     <Terminal />
+
+
     </>
   )
 }
