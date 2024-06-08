@@ -1,5 +1,6 @@
 import React from 'react'
-import PrasadKhatakePDF from "../PrasadKhatake.pdf"
+import PrasadKhatakePDF from "../Prasad_Khatake_Resume.pdf"
+
 const Resume = () => {
   return (
     <div className='w-full min-h-screen'>
