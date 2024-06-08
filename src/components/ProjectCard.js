@@ -1,11 +1,11 @@
 import React from 'react'
 import CodeIcon from '@mui/icons-material/Code';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
-import {clash,ncc,portfolio,floatingNotes} from "../assets/index"
+import {clash,ncc,portfolio,floatingNotes,bhauLang} from "../assets/index"
 
 const ProjectCard = (props) => {
 
-    const imgArray = [clash,ncc,portfolio,floatingNotes];
+    const imgArray = [clash,ncc,portfolio,floatingNotes,bhauLang];
   return (
     
 // h-[33rem]

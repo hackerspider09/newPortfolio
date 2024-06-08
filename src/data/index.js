@@ -309,6 +309,14 @@ export const project = [
         "gitlink": "https://github.com/hackerspider09/FloatingNotes",
         "deplink": ""
     },
+    {
+        "id": 5,
+        "title": "Bhau-Lang",
+        "desc": "BhauLang is a toy programming language inspired by BhaiLang. It includes basic constructs for variable declaration, printing, conditionals, and loops.",
+        "techstack": ["Python"],
+        "gitlink": "https://github.com/hackerspider09/BhauLang",
+        "deplink": "https://pypi.org/project/BhauLang/"
+    },
     
 ]
 
