@@ -14,7 +14,7 @@ const TerminalPrompt = ({
   }) => {
   return (
     <>
-      <div className=" text-blue-600"><span className='text-green-500'>┌──(</span>prasad@DevMachine<span className='text-green-500' >)-[<span className='text-white'>~{currentPath!=='/' ? "/"+currentPath :""}</span>]</span></div>
+      <div className=" text-blue-600"><span className='text-green-500'>┌──(</span>prasad-dev@portfolio<span className='text-green-500' >)-[<span className='text-white'>~{currentPath!=='/' ? "/"+currentPath :""}</span>]</span></div>
       {/* <br /> */}
       <div className=" text-green-500 -mt-[5px]"><span>└─$ </span> <input ref={inputRef} autoComplete="off" type='text' name='ipCommand'  value={inputC}
                     className='border-none w-4/5 outline-none m-0 p-0 bg-transparent text-fLetter '

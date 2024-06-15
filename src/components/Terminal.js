@@ -32,7 +32,7 @@ const Terminal = () => {
     const [outputC,setOutputC] = useState("")
     const [commandHistory,setcommandHistory] = useState([])
     const [commandHistoryIndex,setcommandHistoryIndex] = useState(-1)
-    const defPrompt = <p className='text-red-800 mr-1 inline-block '>prasad@DevMachine <span className='text-primary'>:</span><span>~</span>{currentPath!=='/' ? "/"+currentPath :""} <span className='text-primary'>$</span></p>
+    const defPrompt = <p className='text-red-800 mr-1 inline-block '>prasad-dev@portfolio <span className='text-primary'>:</span><span>~</span>{currentPath!=='/' ? "/"+currentPath :""} <span className='text-primary'>$</span></p>
     
     const inputRef = useRef();
     const terminalRef = useRef();
