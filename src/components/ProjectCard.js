@@ -1,19 +1,23 @@
 import React from 'react'
 import CodeIcon from '@mui/icons-material/Code';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import Tilt from 'react-parallax-tilt';
+
 import {clash,ncc,portfolio,floatingNotes,bhauLang} from "../assets/index"
+
 
 const ProjectCard = (props) => {
 
     const imgArray = [clash,ncc,portfolio,floatingNotes,bhauLang];
   return (
+    <Tilt >
     
-// h-[33rem]
-<div className="max-w-sm  min-h-[33rem] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:shadow-indigo-300 hover:shadow-lg hover:scale-105">
+{/* // h-[33rem] */}
+<div className={` max-w-sm  min-h-[33rem] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:shadow-indigo-300 hover:shadow-lg hover:scale-105`}>
     <div className='h-48'>
 
         <a href="">
-            <img className="rounded-t-lg" src={imgArray[props.project.id -1]} alt="project img" />
+            <img className="rounded-t-lg " src={imgArray[props.project.id -1]} alt="project img" />
         </a>
     </div>
     {/* h-[21rem] */}
@@ -55,6 +59,8 @@ const ProjectCard = (props) => {
         </div>
     </div>
 </div>
+
+</Tilt>
 
   )
 }

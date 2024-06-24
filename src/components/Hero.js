@@ -4,6 +4,7 @@ import Button from "./Button"
 import {logo} from "../assets/index"
 import MatrixRainingCode from './MatrixRainingCode';
 
+
 const Hero = () => {
   return (
     <div className='min-h-screen w-full '>
@@ -26,12 +27,13 @@ const Hero = () => {
             </div>
 
             <div className=' flex justify-center items-center max-xl:pt-[6rem] xl:h-[34rem] xl:w-[62rem]'>
-                <img 
-                src={logo} 
-                // width={250}
-                // height={250}
-                className="xl:w-[100%]  w-[70%] "
-                />
+                  <img 
+                  src={logo} 
+                  // width={250}
+                  // height={250}
+                  className="xl:w-[100%]  w-[70%] "
+                  />
+
             </div>
 
 

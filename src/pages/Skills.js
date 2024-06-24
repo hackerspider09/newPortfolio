@@ -8,7 +8,7 @@ const Skills = () => {
     <div className='w-full'>
         <div className='max-container flex  xl:justify-center'>
 
-        <div className='xl:w-[70%] relative draggable-area flex max-xl:justify-around gap-9 flex-wrap p-5  xl:gap-24 xl:p-[9rem]'>
+        <div className=' relative draggable-area flex max-xl:justify-around justify-between gap-9 flex-wrap p-5  xl:gap-24 xl:p-[9rem] '>
 
          {SkillData.map((data, index) => (
               <Draggable key={index} handle=".handle" bounds=".draggable-area">

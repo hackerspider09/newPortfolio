@@ -10,7 +10,7 @@ const Projects = () => {
         <div>
           <Title title="projects" />
         </div>
-        <div className='flex flex-wrap m-9 gap-10 justify-center items-center h-auto'>
+        <div className='flex flex-wrap my-9 gap-10 justify-center items-center h-auto'>
 
         {project.map((data,index)=>(
           
