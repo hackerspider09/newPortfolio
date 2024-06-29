@@ -11,13 +11,13 @@ const Skills = () => {
         <div className=' relative draggable-area flex max-xl:justify-around justify-between gap-9 flex-wrap p-5  xl:gap-24 xl:p-[9rem] '>
 
          {SkillData.map((data, index) => (
-              <Draggable key={index} handle=".handle" bounds=".draggable-area">
+          <SkillCard key={index} iclass={data.iclass} /> 
+              // <Draggable key={index} handle=".handle" bounds=".draggable-area">
 
-                {/* <SkillCard key={index} iclass={data.iclass} /> */}
-                <div className="handle cursor-move"> 
-                  <SkillCard iclass={data.iclass} />
-                </div>
-              </Draggable>
+              //   <div className="handle cursor-move"> 
+              //     <SkillCard iclass={data.iclass} />
+              //   </div>
+              // </Draggable>
             ))}
 
             </div>

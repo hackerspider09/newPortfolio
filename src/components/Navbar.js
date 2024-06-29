@@ -16,9 +16,10 @@ const Navbar = () => {
         }return false;
     }
   return (
-    <header className='padding-x py-8 absolute z-10 w-full  '>
+    // sticky top-0 padding-x py-8 z-10 w-full bg-mainBg bg-opacity-80 backdrop-blur-sm
+    <div className='padding-x py-8 fixed  top-0 z-10 w-full  '>
 
-            <nav className='flex justify-between  items-center max-container '>
+            <nav className='flex justify-between  items-center max-container backdrop-blur-sm rounded-full px-1 '>
                 <div className="flex  text-fLetter xl:text-4xl text-3xl  ">
                     <span className=' font-bold'>&lt;</span><span className='transform transition-transform duration-300 ease-in-out hover:scale-110 '><a href="/" className=' font-agustina font-bold mx-2   '>Prasad</a></span>
                     <span className=' font-bold'>/&gt;</span>
@@ -29,7 +30,7 @@ const Navbar = () => {
 
                     <ul className='flex-1 flex justify-end items-center gap-16 max-lg:hidden '>
                         {navLinks.map((item)=>(
-                            <li key={item.label} className='font-palanquin leading-normal text-lg text-primary hover:text-fLetter '>
+                            <li key={item.label} className={`${crntPage==item.dir ? "text-fLetter" : "text-primary"}  font-palanquin leading-normal text-lg  hover:text-fLetter `}>
                                 <Link to={item.href}>
                                     {item.label}
                                 </Link>
@@ -53,10 +54,10 @@ const Navbar = () => {
                 
                 onClick={()=>{setHamClicked(false)}}
                 >
-                    <ul className="font-medium flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50  rtl:space-x-reverse  dark:bg-gray-800  dark:border-gray-700">
+                    <ul className="font-medium flex flex-col p-4 mt-4 border bg-mainBg rounded-lg   rtl:space-x-reverse  backdrop-blur-sm border-gray-700">
 
                         {navLinks.map((item)=>(
-                        <li key={item.label} className={`block py-2 px-3 font-palanquin  ${checkPage(item.href) ? "bg-mainBg " : "hover:bg-gray-700 hover:text-white"} rounded   text-white `} aria-current="page">
+                        <li key={item.label} className={`block py-2 px-3 font-palanquin ${crntPage==item.dir ? "text-fLetter" : "text-primary"}    rounded `} aria-current="page">
                             <Link to={item.href}>
                                 {item.label}
                             </Link>
@@ -69,7 +70,7 @@ const Navbar = () => {
                     </ul>
                     </div>
             </nav>
-    </header>
+    </div>
   )
 }
 

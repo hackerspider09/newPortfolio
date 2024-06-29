@@ -13,6 +13,18 @@
   scroll-behavior: smooth;
 }
 
+
+/* Add custom background patterns */
+.bg-grid-box {
+  background-image: linear-gradient(to right, #221C3A 1px, transparent 1px), linear-gradient(to bottom, #221C3A 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-dots {
+  background-image: radial-gradient(#3a3a3a 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
 /* *::-webkit-scrollbar {
   width: 10px;
 } */

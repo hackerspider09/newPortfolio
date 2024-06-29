@@ -21,11 +21,16 @@ function App() {
   useEffect(() => {
     if (location.hash){
       document.querySelector(`${location.hash}`).scrollIntoView()
+    }else{
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     }
-}, [location.hash])
+}, [location.hash,location.pathname])
 
   return (
-    <div className="flex flex-col bg-mainBg overflow-y-hidden">
+    <div className="flex flex-col bg-mainBg  bg-grid-box  overflow-y-hidden">
       <ToastContainer
       position="bottom-center"
       autoClose={5000}

@@ -67,6 +67,7 @@ const Terminal = () => {
     }
     const handleClose = () => {
         // Re-enable overflow when the popup is closed
+        // console.log("closw handle")
         justTerminal(false);
         inputRef.current.blur();
     };
@@ -266,7 +267,7 @@ const Terminal = () => {
   return (
     <div className='w-full h-screen z-0' id='terminal'>
         
-        <div className={`${isMaximize ? 'w-full px-5' : 'max-container'}  h-full flex justify-center items-center flex-col `} >
+        <div className={`${isMaximize ? 'w-full px-5 mt-16' : 'max-container'}  h-full flex justify-center items-center flex-col `} >
         
         <div className={` ${isMaximize ? 'w-full' : 'w-[80%]'} flex justify-start border-2 relative -bottom-6 text-sm bg-terminalBg rounded-t-md p-1`}>
   <span className='inline-block  rounded-full mr-1 bg-red-500 cursor-pointer' onClick={handleClose}><CloseIcon fontSize='small'/></span>
@@ -275,7 +276,7 @@ const Terminal = () => {
 </div>
 
 
-            <div className={` ${isMaximize ? 'w-full xl:h-[90%] h-[80%]' : 'w-[80%] h-[40vh]'} border-2 bg-terminalBg rounded-b-md m-7  overflow-auto py-1 px-3`} ref={terminalRef} onClick={()=>{inputRef.current.focus();scrollToTerminal();justTerminal(true); }}>
+            <div className={` ${isMaximize ? 'w-full xl:h-[80%] h-[80%]' : 'w-[80%] h-[40vh]'} border-2 bg-terminalBg rounded-b-md m-7  overflow-auto py-1 px-3`} ref={terminalRef} onClick={()=>{inputRef.current.focus();scrollToTerminal();justTerminal(true); }}>
 
 
                     <div className=''>
