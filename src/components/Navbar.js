@@ -27,9 +27,9 @@ const Navbar = () => {
                 <div className='flex justify-end w-full'>
 
 
-                    <ul className='flex-1 flex justify-end items-center gap-16 max-lg:hidden'>
+                    <ul className='flex-1 flex justify-end items-center gap-16 max-lg:hidden '>
                         {navLinks.map((item)=>(
-                            <li key={item.label} className='font-montserrat leading-normal text-lg text-primary hover:text-fLetter '>
+                            <li key={item.label} className='font-palanquin leading-normal text-lg text-primary hover:text-fLetter '>
                                 <Link to={item.href}>
                                     {item.label}
                                 </Link>
@@ -56,7 +56,7 @@ const Navbar = () => {
                     <ul className="font-medium flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50  rtl:space-x-reverse  dark:bg-gray-800  dark:border-gray-700">
 
                         {navLinks.map((item)=>(
-                        <li key={item.label} className={`block py-2 px-3  ${checkPage(item.href) ? "bg-mainBg " : "hover:bg-gray-700 hover:text-white"} rounded   text-white `} aria-current="page">
+                        <li key={item.label} className={`block py-2 px-3 font-palanquin  ${checkPage(item.href) ? "bg-mainBg " : "hover:bg-gray-700 hover:text-white"} rounded   text-white `} aria-current="page">
                             <Link to={item.href}>
                                 {item.label}
                             </Link>

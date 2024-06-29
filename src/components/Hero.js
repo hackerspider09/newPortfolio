@@ -15,10 +15,11 @@ const Hero = () => {
               <MatrixRainingCode className="absolute inset-0" /> 
            </div> */}
             <div className='text-white p-20'>
-                <h2 className='flex gap-1  xl:text-[3rem] text-[1.5rem] max-xl:block'>Hi there My name is <span className="text-fLetter inline-block"><Typing/> </span></h2>
-                <p className='xl:text-2xl text-[0.9rem] text-primary font-palanquin'>
+                <h2 className='flex gap-1  xl:text-[3rem] text-[1.5rem] max-xl:block font-serif'>Hi there My name is <span className="text-fLetter inline-block"><Typing/> </span></h2>
+                <p className='xl:text-2xl text-[0.9rem] text-primary font-serif'>
                 I am currently pursuing a bachelor's Degree in Electronics and Telecommunication, from the Pune Institute of Computer Technology. I love to share my knowledge and experience with others.
                 </p>
+              
                 <br />
                 <div className='flex xl:justify-start justify-center'>
                 <Button label="View Resume" href="/resume" />

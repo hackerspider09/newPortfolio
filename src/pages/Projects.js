@@ -1,5 +1,5 @@
 import React from 'react'
-import ProjectCard from '../components/ProjectCard'
+import ProjectCard from '../components/ProjectCard2'
 import { project } from '../data'
 import Title from '../components/Title'
 import { indigo } from '@mui/material/colors'

@@ -269,9 +269,9 @@ const Terminal = () => {
         <div className={`${isMaximize ? 'w-full px-5' : 'max-container'}  h-full flex justify-center items-center flex-col `} >
         
         <div className={` ${isMaximize ? 'w-full' : 'w-[80%]'} flex justify-start border-2 relative -bottom-6 text-sm bg-terminalBg rounded-t-md p-1`}>
-  <span className='inline-block  rounded-full mr-1 bg-red-500' onClick={handleClose}><CloseIcon fontSize='small'/></span>
-  <span className='inline-block  rounded-full mr-1 bg-yellow-500' onClick={()=>{setIsMaximize(false)}}><RemoveIcon fontSize='small'/></span>
-  <span className='inline-block  rounded-full mr-1 bg-green-500' onClick={()=>{setIsMaximize(true)}}><AddIcon fontSize='small'/> </span>
+  <span className='inline-block  rounded-full mr-1 bg-red-500 cursor-pointer' onClick={handleClose}><CloseIcon fontSize='small'/></span>
+  <span className='inline-block  rounded-full mr-1 bg-yellow-500 cursor-pointer' onClick={()=>{setIsMaximize(false)}}><RemoveIcon fontSize='small'/></span>
+  <span className='inline-block  rounded-full mr-1 bg-green-500 cursor-pointer' onClick={()=>{setIsMaximize(true)}}><AddIcon fontSize='small'/> </span>
 </div>
 
 

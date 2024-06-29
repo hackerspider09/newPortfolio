@@ -53,7 +53,7 @@ const Contact = () => {
 
           
 
-            <div className='text-primary xl:w-[50%] mb-5 px-2 flex flex-col gap-3 leading-9 font-palanquin '>
+            <div className='text-primary xl:w-[50%] mb-5 px-2 flex flex-col gap-3 leading-9 font-serif '>
                         {/* <h2 className='text-2xl'>Connect with me</h2> */}
                         <h3 className='xl:text-xl text-sm'> <span className='text-fLetter '><LocationOnIcon/></span> Planet Earth</h3>
                         <h3 className='xl:text-xl text-sm'> <span className='text-fLetter'><MailOutlineIcon /></span> prasadkhatake20@gmail.com</h3>

@@ -25,6 +25,7 @@ export default {
         montserrat: ['Montserrat', 'sans-serif'],
         agustina: ["agustina","sans-serif"],
         airstrike: ["airstrike","sans-serif"],
+        mono: ['Source Code Pro', 'monospace'],
       },
       colors: {
         'mainBg': "#0E1630",
