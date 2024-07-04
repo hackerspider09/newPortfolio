@@ -27,6 +27,10 @@ export const testimonial = [
   ]
 
 
+
+  
+
+
 export const SkillData=[
     {
         id:1,
