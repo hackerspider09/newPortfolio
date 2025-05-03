@@ -61,12 +61,12 @@ const Contact = () => {
                         <h3 className='xl:text-xl text-base'> <span className='text-fLetter'><MailOutlineIcon sx={{ fontSize: 32 }}/></span> prasadkhatake20@gmail.com</h3>
                         <div className=' flex gap-3 '>
                           {/* <span className='text-fLetter hover:shadow-indigo-300 hover:shadow-lg rounded-full p-1'> */}
-                          <span className='text-fLetter rounded-full p-1 hover:scale-150 transform transition duration-500  '>
+                          <span className=' rounded-full p-1 hover:scale-150 transform transition duration-500  '>
                             <a href='https://github.com/hackerspider09'>
                             <GitHubIcon sx={{ fontSize: 32 }}/> 
                             </a>
                             </span> 
-                          <span className='text-fLetter rounded-full p-1 hover:scale-150 transform transition duration-500 '>
+                          <span className=' rounded-full p-1 hover:scale-150 transform transition duration-500 '>
                             <a href='https://www.linkedin.com/in/prasad-khatake'>
                             <LinkedInIcon sx={{ fontSize: 32 }} />
 
@@ -76,7 +76,7 @@ const Contact = () => {
                             <a href='https://medium.com/@prasadkhatake'>
                               {/* <medium /> */}
                               {/* <img src={medium} alt="Medium Icon"  className='w-8 h-8 fill-current text-white'/> */}
-                              <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 fill-current text-fLetter" viewBox="0 0 640 512"><path d="M180.5 74.3C80.8 74.3 0 155.6 0 256S80.8 437.7 180.5 437.7 361 356.4 361 256 280.2 74.3 180.5 74.3zm288.3 10.6c-49.8 0-90.2 76.6-90.2 171.1s40.4 171.1 90.3 171.1 90.3-76.6 90.3-171.1H559C559 161.5 518.6 84.9 468.8 84.9zm139.5 17.8c-17.5 0-31.7 68.6-31.7 153.3s14.2 153.3 31.7 153.3S640 340.6 640 256C640 171.4 625.8 102.7 608.3 102.7z"/></svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 fill-current " viewBox="0 0 640 512"><path d="M180.5 74.3C80.8 74.3 0 155.6 0 256S80.8 437.7 180.5 437.7 361 356.4 361 256 280.2 74.3 180.5 74.3zm288.3 10.6c-49.8 0-90.2 76.6-90.2 171.1s40.4 171.1 90.3 171.1 90.3-76.6 90.3-171.1H559C559 161.5 518.6 84.9 468.8 84.9zm139.5 17.8c-17.5 0-31.7 68.6-31.7 153.3s14.2 153.3 31.7 153.3S640 340.6 640 256C640 171.4 625.8 102.7 608.3 102.7z"/></svg>
 
                             </a>
                             </span>

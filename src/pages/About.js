@@ -13,11 +13,11 @@ const About = () => {
     
   return (
     <div className='w-full ' id='skills'>
-        <div className='min-h-screen pt-32'>
-            <div className='m-6'>
-            <Title title="Skills" />
+        <div className='min-h-screen max-container pt-36'>
+            <div>
         {/* <h1 className="title-font text-center mb-4 text-2xl font-medium text-fLetter sm:text-3xl font-airstrike">Skills</h1> */}
-        <Skills />
+                
+                <Skills />
             </div>
 
             {/* <HorizontalLine />
@@ -27,7 +27,8 @@ const About = () => {
             </div> */}
             
             <HorizontalLine />
-            <div className='m-6' id='contact'>
+
+            <div className='mt-6' id='contact'>
 
                 <Contact />
             </div>

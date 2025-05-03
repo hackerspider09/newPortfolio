@@ -287,7 +287,8 @@ export const project = [
         "desc": "MCQ platform for the annual tech event Credenz.This platform facilitates engaging multiple-choice questions.",
         "techstack": ["Django", "HTML", "CSS", "JavaScript", "AJAX", "SQL", "Azure", "Docker"],
         "gitlink": "https://github.com/PISB-Backend-SIGs/Clash-1",
-        "deplink": ""
+        "deplink": "",
+        "articlelink":""
     },
     {
         "id": 2,
@@ -295,7 +296,8 @@ export const project = [
         "desc": "Online judge for the tech event CTD (Credenz Tech Days) featuring a comprehensive code evaluation system. Users submit code, which undergoes rigorous testing against predefined test cases.",
         "techstack": ["Django", "Django REST Framework", "React", "SQL", "Docker", "Azure"],
         "gitlink": "https://github.com/CTD-23/NCC-Backend",
-        "deplink": ""
+        "deplink": "https://ctdrc23.netlify.app",
+        "articlelink":""
     },
     {
         "id": 3,
@@ -303,7 +305,8 @@ export const project = [
         "desc": "A personal tech portfolio showcasing projects, skills, and experiences.",
         "techstack": ["React", "Tailwindcss"],
         "gitlink": "https://github.com/hackerspider09/newPortfolio",
-        "deplink": "https://prasadkhatake.netlify.app"
+        "deplink": "https://prasadkhatake.netlify.app",
+        "articlelink":""
     },
     {
         "id": 4,
@@ -311,7 +314,8 @@ export const project = [
         "desc": "A Java-based application that creates floating sticky notes on the screen. These notes persistently stick to the sides of the screen and allow users to create, edit, and delete notes.",
         "techstack": ["Java"],
         "gitlink": "https://github.com/hackerspider09/FloatingNotes",
-        "deplink": ""
+        "deplink": "",
+        "articlelink":""
     },
     {
         "id": 5,
@@ -319,8 +323,18 @@ export const project = [
         "desc": "BhauLang is a toy programming language inspired by BhaiLang. It includes basic constructs for variable declaration, printing, conditionals, and loops.",
         "techstack": ["Python"],
         "gitlink": "https://github.com/hackerspider09/BhauLang",
-        "deplink": "https://pypi.org/project/BhauLang/"
+        "deplink": "https://pypi.org/project/BhauLang/",
+        "articlelink":"https://prasadkhatake.medium.com/how-i-built-my-own-programming-language-871c605ca9c4"
     },
+    {
+        "id": 6,
+        "title": "Mini-Nginx",
+        "desc": "A lightweight web server and reverse proxy built in Python, inspired by Nginx. It follows an event-driven, single-threaded architecture using async I/O for efficient request handling.",
+        "techstack": ["Python"],
+        "gitlink": "https://github.com/hackerspider09/Mini-Nginx",
+        "deplink": "",
+        "articlelink":"https://prasadkhatake.medium.com/inside-nginx-a-simple-guide-to-its-internal-architecture-09ca7d269cae"
+    }
     
 ]
 

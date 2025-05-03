@@ -17,7 +17,7 @@ const Navbar = () => {
     }
   return (
     // sticky top-0 padding-x py-8 z-10 w-full bg-mainBg bg-opacity-80 backdrop-blur-sm
-    <div className='padding-x py-8 fixed  top-0 z-10 w-full  '>
+    <div className='padding-x py-8 fixed  top-0 z-50 w-full  '>
 
             <nav className='flex justify-between  items-center max-container backdrop-blur-sm rounded-full px-1 '>
                 <div className="flex  text-fLetter xl:text-4xl text-3xl  ">
